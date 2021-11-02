@@ -1,0 +1,75 @@
+.search-modal.expand {
+    position: relative;
+    display: block;
+    bottom: 1px;
+}
+
+.search-modal {
+    display: none;
+    position: absolute;
+    width: 100vw;
+    left: calc(-50vw + 50%);
+    max-height: 100%;
+    box-shadow: inset 2px 3px 3px rgba(0,0,0,0.07);
+    background: white;
+    padding: 5px 20px 20px 20px;
+    border: 1px solid $light-gray;
+    border-radius: 3px;
+    overflow: hidden;
+}
+
+.icon-container {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 5px;
+}
+
+.search-modal .fa-times-circle {
+    font-size: 15px;
+    color: $light-gray;
+    cursor: pointer;
+}
+
+.search-modal .fa-times-circle:hover {
+    font-size: 18px;
+    color: $gray;
+    transition: 0.5s ease;
+}
+
+.search-modal .fa-times-circle:active {
+    transition: initial;
+    color: black;
+}
+
+.search-modal form {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.search-modal button {
+    margin-left: 10px;
+    background: white;
+    color: $gray;
+    border: 1px solid $light-gray;
+}
+
+.search-modal button:hover {
+    background: $gray;
+    color: white;
+}
+
+.search-modal button:active {
+    transition: initial;
+    background: black;
+}
+
+input[type="search"] {
+    text-align: center;
+    padding: 5px;
+    width: 50%;
+    background: white;
+    box-shadow: inset 2px 3px 3px rgba(0,0,0,0.07);
+    border-radius: 3px;
+    border: 1px solid $light-gray;
+}

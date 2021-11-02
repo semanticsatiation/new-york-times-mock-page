@@ -1,0 +1,118 @@
+.sections-sidebar.expand {
+	display: block;
+}
+
+.sections-sidebar {
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 30px;
+    font-size: 12px;
+    background-color: #fff;
+    font-weight: bolder;
+    text-transform: initial; //initial is used to set a CSS property to its default value 
+    width: 150px;
+    z-index: 1;
+    box-shadow: -1px 4px 6px 1px rgba(0,0,0,0.09);
+    padding: 10px;
+}
+
+.sections-sidebar ul {
+	text-align: left;
+}
+
+.sections-sidebar ul li {
+	margin: 0;
+	padding: 5px;
+	border-radius: 5px;
+	position: relative;
+}
+
+/*
+ SUB MENU DROPDOWNS
+*/
+
+.sections-sidebar ul li.subheader {
+	font-size: smaller;
+	text-transform: uppercase;
+	color: $gray;
+	margin: 0 0 5px 0;
+}
+
+.sections-sidebar .dropdown {
+    position: relative;
+}
+
+.sections-sidebar .dropdown > ul {
+    display: none;
+    position: absolute;
+    top: -25px;
+    left: 160px;
+    background-color: #fff;
+    border: 1px solid $light-gray;
+    border-radius: 3px;
+    z-index: 1;
+    padding: 10px;
+    width: 150px;
+    box-shadow: -1px 4px 6px 1px rgba(0,0,0,0.09);
+}
+
+.sections-sidebar .dropdown:hover > ul {
+    display: block;
+}
+
+
+/*
+ MENU TRIANGLES
+*/
+
+.sections-sidebar > ul > li:after,
+.sections-sidebar > ul > li:before  {
+	content: "";
+	position: absolute;
+	right: 0;
+	top: 10px;
+	border-left: 5px solid $light-gray;
+	border-top: 5px solid transparent;
+	border-bottom: 5px solid transparent;
+	width: 0;
+	height: 0;
+}
+// create two triangles above
+
+.sections-sidebar > ul > li:before  {
+	right: 2px;
+	border-left: 5px solid white;
+	z-index: 1;
+}
+// modify the one that comes before
+
+.sections-sidebar ul li:hover:not(.subheader) {
+	background-color: $lightest-blue;
+}
+
+/*
+ SUB MENU TRIANGLES
+*/
+
+.sections-sidebar .dropdown ul:before {
+	display: block;
+	content: '';
+	border-right: 21px solid $light-gray;
+	border-top: 21px solid transparent;
+	border-bottom: 21px solid transparent;
+	position: absolute;
+	left: -22px;
+	top: 17px;
+}
+
+.sections-sidebar .dropdown ul:after {
+	display: block;
+	content: '';
+	border-right: 21px solid white;
+	border-top: 21px solid transparent;
+	border-bottom: 21px solid transparent;
+	position: absolute;
+	left: -20px;
+	top: 17px;
+}

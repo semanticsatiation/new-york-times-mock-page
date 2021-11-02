@@ -1,0 +1,79 @@
+.columns {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.mid-column article > header {
+    margin-top: 10px;
+}
+
+.mid-column hr {
+    width: 50%;
+	color: $gray;
+}
+
+article > h2 {
+    font-size: 9px;
+    font-weight: 100;
+    text-transform: uppercase; 
+    margin: 2px 0;
+}
+
+.opinion {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.bullet-list {
+    font-weight: bold;
+    font-size: 10px;
+}
+
+.columns ul {
+    	padding-left: 15px;
+}
+
+.columns li {
+    list-style: initial;
+}
+
+.author, center {
+    margin: 5px 0;
+    display: block;
+    font-size: 10px;
+    font-weight: bold;
+    color: $gray;
+}
+
+ul > li {
+    margin-top: 5px;
+}
+
+/* 
+	Comments Link with Blue Square
+*/
+
+.comments {
+	color: #326891;
+	font-family: $sans-serif;
+	font-size: 10px;
+    vertical-align: bottom;
+    cursor: pointer;
+}
+
+@media all and (max-width: 1000px) {
+
+    section:not(:last-of-type) {
+        border-bottom: 1px solid $gray;
+        margin-bottom: 10px;
+    }
+
+    article {
+        padding-bottom: 10px;
+    }
+
+    .hr-top, .hr-bottom, form {
+        display: none;
+    }
+}
